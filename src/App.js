@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { HashRouter, Route, Link} from 'react-router-dom';
 import projectData from './raycsv.csv';
-import * as d3 from 'd3';
+
 
 class App extends Component {
   render() {
@@ -36,28 +36,30 @@ class Home extends Component {
 class Projects extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      dat:[]
-    }
-  }
-  componentDidMount() {
-    d3.csv(projectData, (err, data) => {
-      this.setState({
-          dat: data
-      })
-    })
-    /*d3.csv(projectData).then(function(element) {
-        
-    }).catch(function(err) {
-        throw err;
-    }) */
+    
   }
   render() {
-    return ( 
-      <div className = "App" >
-        {this.state.dat.map((d, i) => {
-          return <p>{d.Projects}</p>
-        })}
+    var request = new XMLHttpRequest();  
+    request.open("GET", projectData, false);   
+    request.send(null);  
+
+    var csvData = new Array();
+    var jsonObject = request.responseText.split(/\r?\n|\r/);
+    for (var i = 0; i < jsonObject.length; i++) {
+      csvData.push(jsonObject[i].split(','));
+    }
+    // Retrived data from csv file content
+    let projArray = csvData.map(element => {
+      return(
+        <p>
+          {element[0]}
+        </p>
+      );
+    });
+    
+    return(
+      <div>
+        {projArray}
       </div>
     );
   }
