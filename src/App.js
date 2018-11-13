@@ -35,11 +35,16 @@ class Home extends Component {
 
 class Projects extends Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {
+      data:[]
+    }
   }
   componentDidMount() {
-    d3.csv(projectData).then(function(data) {
-        console.log(data)
+    d3.csv(projectData).then(function(element) {
+        this.setState({
+          data: element
+        });
     }).catch(function(err) {
         throw err;
     })
@@ -47,7 +52,9 @@ class Projects extends Component {
   render() {
     return ( 
       <div className = "App" >
-        <div> Data Visualization </div> 
+        {this.state.data.map(element => {
+          return <p>{element.Projects}</p>
+        }) }
       </div>
     );
   }
