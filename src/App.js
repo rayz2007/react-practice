@@ -41,13 +41,16 @@ class Projects extends Component {
     }
   }
   componentDidMount() {
-    d3.csv(projectData).then(function(element) {
-        this.setState({
-          data: element
-        });
+    d3.csv(projectData, (err, data) => {
+      this.setState({
+          data: data
+      })
+    })
+    /*d3.csv(projectData).then(function(element) {
+        
     }).catch(function(err) {
         throw err;
-    })
+    }) */
   }
   render() {
     return ( 
