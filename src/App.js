@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
 import './App.css';
 import { HashRouter, Route, Link} from 'react-router-dom';
+import projectData from './raycsv.csv';
+import * as d3 from 'd3';
 
 class App extends Component {
   render() {
@@ -33,9 +34,21 @@ class Home extends Component {
 }
 
 class Projects extends Component {
+  constructor(props) {
+    super(props)
+  }
+  componentDidMount() {
+    d3.csv(projectData).then(function(data) {
+        console.log(data)
+    }).catch(function(err) {
+        throw err;
+    })
+  }
   render() {
-    return(
-      <h1>hello</h1>
+    return ( 
+      <div className = "App" >
+        <div> Data Visualization </div> 
+      </div>
     );
   }
 }

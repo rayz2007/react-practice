@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://rayz2007.github.io/react-practice",
   "dependencies": {
+    "d3": "^5.7.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-router-dom": "^4.3.1",
