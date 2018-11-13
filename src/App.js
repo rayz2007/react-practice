@@ -37,13 +37,13 @@ class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data:[]
+      dat:[]
     }
   }
   componentDidMount() {
     d3.csv(projectData, (err, data) => {
       this.setState({
-          data: data
+          dat: data
       })
     })
     /*d3.csv(projectData).then(function(element) {
@@ -55,9 +55,9 @@ class Projects extends Component {
   render() {
     return ( 
       <div className = "App" >
-        {this.state.data.map(element => {
-          return <p>{element.Projects}</p>
-        }) }
+        {this.state.dat.map((d, i) => {
+          return <p>{d.Projects}</p>
+        })}
       </div>
     );
   }
