@@ -1,28 +1,54 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import { HashRouter, Route, Link} from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <HashRouter>
+        <div className="container">
+          <Link to="/">Home</Link>
+          { ' ' }
+          <Link to="/projects">Projects</Link>
+          { ' ' }
+          <Link to="/about">About</Link>
+          <Route exact path="/" component={ Home } />
+          <Route path="/projects" component={ Projects } />
+          <Route path="/about" component={ About } />
+        </div>
+      </HashRouter>
     );
   }
 }
 
+class Home extends Component {
+  render() {
+    return(
+      <h1>
+        Hello, my name is Ray Zhang
+      </h1>
+    );
+  }
+}
+
+class Projects extends Component {
+  render() {
+    return(
+      <h1>hello</h1>
+    );
+  }
+}
+
+class About extends Component {
+  render() {
+    return(
+      <h1>
+        This is my React Practice site.
+      </h1>
+    );
+  }
+}
+ 
 export default App;
+
