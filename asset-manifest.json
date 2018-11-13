@@ -1,14 +1,14 @@
 {
-  "main.css": "/react-practice/static/css/main.b8c6f54c.chunk.css",
-  "main.js": "/react-practice/static/js/main.3dfdc3f8.chunk.js",
-  "main.js.map": "/react-practice/static/js/main.3dfdc3f8.chunk.js.map",
-  "static/js/1.cb9fdb36.chunk.js": "/react-practice/static/js/1.cb9fdb36.chunk.js",
-  "static/js/1.cb9fdb36.chunk.js.map": "/react-practice/static/js/1.cb9fdb36.chunk.js.map",
+  "main.css": "/react-practice/static/css/main.597cb6cb.chunk.css",
+  "main.js": "/react-practice/static/js/main.c1969712.chunk.js",
+  "main.js.map": "/react-practice/static/js/main.c1969712.chunk.js.map",
+  "static/js/1.71a50e43.chunk.js": "/react-practice/static/js/1.71a50e43.chunk.js",
+  "static/js/1.71a50e43.chunk.js.map": "/react-practice/static/js/1.71a50e43.chunk.js.map",
   "runtime~main.js": "/react-practice/static/js/runtime~main.f878aa0a.js",
   "runtime~main.js.map": "/react-practice/static/js/runtime~main.f878aa0a.js.map",
   "static/media/raycsv.csv": "/react-practice/static/media/raycsv.49a6dc29.csv",
-  "static/css/main.b8c6f54c.chunk.css.map": "/react-practice/static/css/main.b8c6f54c.chunk.css.map",
+  "static/css/main.597cb6cb.chunk.css.map": "/react-practice/static/css/main.597cb6cb.chunk.css.map",
   "index.html": "/react-practice/index.html",
-  "precache-manifest.88724e08200ff426ac79f740c55bec41.js": "/react-practice/precache-manifest.88724e08200ff426ac79f740c55bec41.js",
+  "precache-manifest.7dc3ee46480787914a82601f0adc6ccd.js": "/react-practice/precache-manifest.7dc3ee46480787914a82601f0adc6ccd.js",
   "service-worker.js": "/react-practice/service-worker.js"
 }
